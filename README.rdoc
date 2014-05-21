@@ -1,28 +1,7 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The app has been developed based on parsing
+http://www.amazon.com/gp/product/0465050654/ref=s9_psimh_gw_p14_d3_i1?pf_rd_m=ATVPDKIKX0DER&pf_rd_s=center-2&pf_rd_r=1Z4TWWMB46JZTNAH9DVN&pf_rd_t=101&pf_rd_p=1688200382&pf_rd_i=507846
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Any other url would not work.
+There's something with the prices. The prices changes on the request, probably depending on the headers, so I not checking the price but other fields.
