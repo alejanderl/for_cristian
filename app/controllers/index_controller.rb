@@ -1,13 +1,7 @@
 class IndexController < ApplicationController
 
   def index
-    render "index"
-
+    @amazon_product = AmazonProduct.new(params[:q]) if params[:q]
   end
-
-  def search
-
-  end
-
 
 end

@@ -1,1 +1,37 @@
-index.html.erb
+
+
+<%= form_tag root_path do %>
+
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+
+<% end %>
+
+
+<div id="result">
+
+  <% if @amazon_product %>
+    <br/>
+    <b>Title</b><br/>
+    <span id="title" ><%= @amazon_product.title %></span>
+    <br/>
+    <b>Author</b><br/>
+    <span id="author"><%= @amazon_product.author%></span>
+    <br/>
+    <b>Prices</b>
+    <ul id="prices">
+      <% @amazon_product.prices.each do |format,price|  %>
+        <li><%= format %>:<%= price %>
+        </li>
+      <%end%>
+    </ul>
+    <b>ISBN-Numbers</b>
+    <ul id="isbn_numbers">
+      <% @amazon_product.isbn_numbers.each do |number|  %>
+        <li><%= number %>
+      <%end%>
+    </ul>
+  <% end %>
+
+</div>
